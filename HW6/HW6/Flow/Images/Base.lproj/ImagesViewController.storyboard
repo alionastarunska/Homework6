@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iAW-rA-eWQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Images View Controller-->
+        <scene sceneID="FEC-pB-IKl">
+            <objects>
+                <viewController storyboardIdentifier="ImagesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iAW-rA-eWQ" customClass="ImagesViewController" customModule="HW6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tj6-eV-gST">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZcS-tE-ieC">
+                                <rect key="frame" x="0.0" y="74" width="414" height="822"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4t-y1-a5g">
+                                <rect key="frame" x="368" y="44" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VYK-jE-EIl"/>
+                                    <constraint firstAttribute="width" constant="30" id="y8d-HL-etc"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="logout"/>
+                                <connections>
+                                    <action selector="logoutButtonAction:" destination="iAW-rA-eWQ" eventType="touchUpInside" id="Wl4-yl-x4p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViR-2X-b6W">
+                                <rect key="frame" x="179.5" y="42.5" width="55" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Photos">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mPe-3J-PgZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ViR-2X-b6W" firstAttribute="centerY" secondItem="U4t-y1-a5g" secondAttribute="centerY" id="8i7-0q-1HE"/>
+                            <constraint firstItem="U4t-y1-a5g" firstAttribute="top" secondItem="mPe-3J-PgZ" secondAttribute="top" id="C6F-Nk-Ko5"/>
+                            <constraint firstItem="ZcS-tE-ieC" firstAttribute="leading" secondItem="mPe-3J-PgZ" secondAttribute="leading" id="ELy-Us-pP8"/>
+                            <constraint firstItem="ZcS-tE-ieC" firstAttribute="top" secondItem="U4t-y1-a5g" secondAttribute="bottom" id="Jun-q4-Qng"/>
+                            <constraint firstAttribute="bottom" secondItem="ZcS-tE-ieC" secondAttribute="bottom" id="PIs-Id-ZmC"/>
+                            <constraint firstItem="mPe-3J-PgZ" firstAttribute="trailing" secondItem="ZcS-tE-ieC" secondAttribute="trailing" id="b3y-6B-WOa"/>
+                            <constraint firstItem="mPe-3J-PgZ" firstAttribute="trailing" secondItem="U4t-y1-a5g" secondAttribute="trailing" constant="16" id="tK7-Sp-WwD"/>
+                            <constraint firstItem="ViR-2X-b6W" firstAttribute="centerX" secondItem="mPe-3J-PgZ" secondAttribute="centerX" id="yEA-dW-Ujo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagesTableView" destination="ZcS-tE-ieC" id="knJ-FI-rqk"/>
+                        <outlet property="loguotButton" destination="U4t-y1-a5g" id="tHt-9H-d81"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9E7-Wf-Muj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317.39130434782612" y="59.598214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logout" width="840" height="860"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

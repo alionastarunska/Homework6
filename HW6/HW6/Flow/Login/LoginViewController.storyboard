@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DkP-HT-x5B">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="mbh-bU-z7b">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DkP-HT-x5B" customClass="LoginViewController" customModule="HW6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Khe-Ky-IQg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5o-ve-80E">
+                                <rect key="frame" x="67" y="428" width="280" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBI-dP-IqA">
+                                        <rect key="frame" x="60" y="6" width="214" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                        <state key="normal" title="Log In with GitHub">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonAction:" destination="DkP-HT-x5B" eventType="touchUpInside" id="RuB-rV-a1x"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="git" translatesAutoresizingMaskIntoConstraints="NO" id="lak-6z-Cek">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="086-Qv-f8v"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lak-6z-Cek" secondAttribute="bottom" id="0yo-Vq-K68"/>
+                                    <constraint firstItem="JBI-dP-IqA" firstAttribute="centerY" secondItem="lak-6z-Cek" secondAttribute="centerY" id="3aj-Ph-8IG"/>
+                                    <constraint firstItem="lak-6z-Cek" firstAttribute="top" secondItem="I5o-ve-80E" secondAttribute="top" id="RKy-H3-SA6"/>
+                                    <constraint firstAttribute="width" constant="280" id="ZWL-1m-Sg4"/>
+                                    <constraint firstAttribute="trailing" secondItem="JBI-dP-IqA" secondAttribute="trailing" constant="6" id="c3x-GG-ABO"/>
+                                    <constraint firstItem="lak-6z-Cek" firstAttribute="leading" secondItem="I5o-ve-80E" secondAttribute="leading" id="jyF-Mq-yhV"/>
+                                    <constraint firstItem="JBI-dP-IqA" firstAttribute="leading" secondItem="lak-6z-Cek" secondAttribute="trailing" id="l2W-jt-vTh"/>
+                                    <constraint firstAttribute="height" constant="50" id="ohJ-Bj-mNa"/>
+                                </constraints>
+                            </view>
+                            <wkWebView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhD-Bq-l2k">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pWt-kP-bDv"/>
+                        <color key="backgroundColor" red="1" green="0.93655099188306046" blue="0.21622140758716879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I5o-ve-80E" firstAttribute="centerY" secondItem="pWt-kP-bDv" secondAttribute="centerY" id="3fz-Hh-ut0"/>
+                            <constraint firstItem="I5o-ve-80E" firstAttribute="centerX" secondItem="pWt-kP-bDv" secondAttribute="centerX" id="4ZY-xO-1Ib"/>
+                            <constraint firstItem="QhD-Bq-l2k" firstAttribute="leading" secondItem="pWt-kP-bDv" secondAttribute="leading" id="Atd-TZ-O05"/>
+                            <constraint firstItem="QhD-Bq-l2k" firstAttribute="top" secondItem="pWt-kP-bDv" secondAttribute="top" id="F0g-po-HIE"/>
+                            <constraint firstItem="QhD-Bq-l2k" firstAttribute="trailing" secondItem="pWt-kP-bDv" secondAttribute="trailing" id="U3w-Ef-fz7"/>
+                            <constraint firstAttribute="bottom" secondItem="QhD-Bq-l2k" secondAttribute="bottom" id="hzg-5Z-aWQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LogInButton" destination="JBI-dP-IqA" id="Hyo-b6-qeW"/>
+                        <outlet property="loginWKWebView" destination="QhD-Bq-l2k" id="gTt-Ar-BMo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbx-TB-iZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="git" width="900" height="900"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
